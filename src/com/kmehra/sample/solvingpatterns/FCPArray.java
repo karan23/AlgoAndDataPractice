@@ -1,4 +1,4 @@
-package com.kmehra.sample;
+package com.kmehra.sample.solvingpatterns;
 
 import java.util.HashMap;
 // Frequency Counter Pattern (FCP)
