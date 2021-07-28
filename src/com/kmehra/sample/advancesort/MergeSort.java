@@ -1,5 +1,7 @@
 package com.kmehra.sample.advancesort;
 
+import java.util.Arrays;
+
 public class MergeSort {
 	
 	public static int[] merge(int[] array1, int[] array2) {
@@ -44,12 +46,27 @@ public class MergeSort {
 		return finalArray;
 	}
 	
+	public static int[] mergeSort(int[] array) {
+		
+		if(array.length <= 1) return array;
+		
+		int mid = (int) Math.floor(array.length/2);
+		int[] preArray = mergeSort(Arrays.copyOfRange(array, 0, mid));
+		int[] postArray = mergeSort(Arrays.copyOfRange(array, mid, array.length));
+		
+		return merge(preArray, postArray);
+	}
+	
 	public static void main(String[] args) {
 		
-		int[] array1 = {1,10,50};
-		int[] array2 = {2,14,99,100};
+//		int[] array1 = {1,10,50};
+//		int[] array2 = {2,14,99,100};
+//		
+//		int[] finalArray = merge(array1, array2);
 		
-		int[] finalArray = merge(array1, array2);
+		int[] array = {10,24,76,73};
+		
+		int[] finalArray = mergeSort(array);
 		
 		System.out.println("The final Sorted Array :: ");
 		

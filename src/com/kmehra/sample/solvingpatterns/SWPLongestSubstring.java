@@ -2,6 +2,7 @@ package com.kmehra.sample.solvingpatterns;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 // SWP
 // Write a function called findLongestSubstring, which accepts 
