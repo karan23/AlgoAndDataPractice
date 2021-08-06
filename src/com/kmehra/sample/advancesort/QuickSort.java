@@ -26,13 +26,36 @@ public class QuickSort {
 		return lessValuesIndex-1;
 	}
 	
+	public static int[] quickSort(int[] array) {
+		
+		return quickSort(array, 0, array.length -1);
+	}
+	
+	public static int[] quickSort(int[] array, int left, int right) {
+		
+		if(left < right) {
+			
+			int pivot = pivot(array, left, right);
+			
+			// left sorting
+			quickSort(array, left, pivot-1);
+			
+			// right sorting
+			quickSort(array, pivot+1, right);
+		}
+			
+			
+		return array;
+		
+		
+		
+	}
+	
 	public static void main(String[] args) {
 		
-		int[] array = {28,41,4,11,16,1,40,14,36,37,42,18};//{5,2,1,8,4,7,6,3};
+		int[] array = {100,-3,2,4,6,9,1,2,5,3,23};//{26,23,27,44,17,47,39,42,43,1};//{28,41,4,11,16,1,40,14,36,37,42,18};//{5,2,1,8,4,7,6,3};
 		
-		int position = pivot(array, 0, array.length-1);
-		
-		System.out.println("Position of pivot point : " + position);
+		quickSort(array);
 		
 		System.out.println("The final Array is :: ");
 		for(int i = 0; i<array.length; i++) {
