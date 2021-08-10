@@ -87,7 +87,7 @@ public class RadixSort {
 //		System.out.println("The value is :: " + output);
 		
 		
-		Integer[] array = {34,22,10,19,17};
+		Integer[] array = {23,345,5467,12,2345,9852};//{34,22,10,19,17};
 
 		List<Integer> list = Arrays.asList(array);
 		
