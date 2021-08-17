@@ -16,16 +16,25 @@ public class SLLCreation {
 		
 		singlyLinkList.push("hello");
  		singlyLinkList.push("there");
-//		singlyLinkList.push("how");
-//		singlyLinkList.push("are");
-//		singlyLinkList.push("you");
+		singlyLinkList.push("how");
+		singlyLinkList.push("are");
+		singlyLinkList.push("you");
 		
 		// singlyLinkList.traverse();
 		
-		Node dNode = singlyLinkList.pop();
+		//Node dNode = singlyLinkList.pop();
 //		dNode = singlyLinkList.pop();
 		
-		String value =  dNode != null ? dNode.val : "null";
+//		String value =  dNode != null ? dNode.val : "null";
+//		System.out.println("Node value : " + value + " and length is : " + singlyLinkList.length);
+ 		
+		singlyLinkList.traverse();
+	//	singlyLinkList.unshift("My");
+// 		singlyLinkList.shifting();
+ //		singlyLinkList.traverse();
+		
+		Node node = singlyLinkList.get(2);
+		String value =  node != null ? node.val : "null";
 		System.out.println("Node value : " + value + " and length is : " + singlyLinkList.length);
 	}
 	
