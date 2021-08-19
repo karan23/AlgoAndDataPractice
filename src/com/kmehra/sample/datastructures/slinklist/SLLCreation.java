@@ -28,14 +28,21 @@ public class SLLCreation {
 //		String value =  dNode != null ? dNode.val : "null";
 //		System.out.println("Node value : " + value + " and length is : " + singlyLinkList.length);
  		
+		
+		singlyLinkList.traverse();
+//		boolean value = singlyLinkList.set(2, "is");
+		//boolean value = singlyLinkList.insert(5, "inserted");
+		// boolean value = singlyLinkList.remove(3);
+		boolean value = singlyLinkList.reverse();
+		System.out.println("The node is set :: " + value + " length is :: " + singlyLinkList.length);
 		singlyLinkList.traverse();
 	//	singlyLinkList.unshift("My");
 // 		singlyLinkList.shifting();
  //		singlyLinkList.traverse();
 		
-		Node node = singlyLinkList.get(2);
-		String value =  node != null ? node.val : "null";
-		System.out.println("Node value : " + value + " and length is : " + singlyLinkList.length);
+		//Node node = singlyLinkList.get(2);
+	//	String value =  node != null ? node.val : "null";
+	//	System.out.println("Node value : " + value + " and length is : " + singlyLinkList.length);
 	}
 	
 }
