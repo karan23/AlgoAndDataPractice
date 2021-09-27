@@ -148,4 +148,84 @@ public class DoublyLinkList {
 			
 			return traverseNode;
 		}
+		
+		
+		// modify the value at index
+		public boolean set(int index, String value) {
+			boolean isChanged = false; 
+			Node node = get(index);
+			
+			if(node != null) {
+				
+				node.value = value;
+				isChanged = true;
+			}
+			
+			return isChanged;
+		}
+		
+		
+		// create a new node and put it at index
+		public boolean insert(int index, String value) {
+			
+			Node newNode = new Node(value);
+			boolean isInserted = false;
+			
+			 if(this.length == 0) {
+				
+				unshift(value);
+				isInserted = true;
+			} else if(this.length == index) {
+				
+				push(value);
+				isInserted = true;
+			} else if(index > 0 
+					&& index < this.length) {
+				
+				Node currentNode = get(index);
+				newNode.prev = currentNode.prev;
+				
+				newNode.next = currentNode;
+				if(newNode.prev != null) {
+					newNode.prev.next = newNode;
+				}
+				currentNode.prev = newNode;
+				this.length++;
+				isInserted = true;
+			} 
+			
+			
+			
+			return isInserted;
+		}
+		
+		// removing the particular node at index
+		public boolean remove(int index) {
+			
+			boolean isRemoved = false;
+			
+			if(index == 0) {
+				
+				shifting();
+				isRemoved = true;
+			} else if(index == this.length -1) {
+				
+				pop();
+				isRemoved = true;
+			} else if(index > 0
+					&& index < this.length) {
+				
+				Node currentNode = get(index);
+				currentNode.prev.next = currentNode.next;
+				currentNode.next.prev = currentNode.prev;
+				
+				currentNode.next = null;
+				currentNode.prev = null;		
+				
+				this.length--;
+				isRemoved = true;
+			}
+			
+			return isRemoved;
+		}
 }
