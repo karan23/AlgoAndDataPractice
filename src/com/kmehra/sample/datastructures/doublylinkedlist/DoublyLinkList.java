@@ -228,4 +228,24 @@ public class DoublyLinkList {
 			
 			return isRemoved;
 		}
+		
+		// reverse the DLL
+		public void reverse() {
+			
+			if(this.length == 0 || this.length == 1) return;
+			
+			Node currentNode = this.tail;
+			this.tail = this.head;
+			this.head = currentNode;
+			
+			while(currentNode != null) {
+				
+				Node tempNode = currentNode.prev;
+				currentNode.prev = currentNode.next;
+				currentNode.next = tempNode;
+				currentNode = tempNode;
+			}
+			
+			return;
+		}
 }
