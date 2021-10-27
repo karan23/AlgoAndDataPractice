@@ -27,7 +27,7 @@ public class Stack {
 		}
 	
 	
-	public Node push(String value) {
+	public Node push(String value) { // add to first position
 		
 		Node addingNode = new Node(value);
 		
@@ -47,7 +47,7 @@ public class Stack {
 		return addingNode;
 	}
 	
-	public Node pop() {
+	public Node pop() { // remove from first position
 		
 		Node poppedNode = null;
 		
