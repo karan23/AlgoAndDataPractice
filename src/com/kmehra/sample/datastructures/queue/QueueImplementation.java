@@ -1,6 +1,5 @@
 package com.kmehra.sample.datastructures.queue;
 
-
 public class QueueImplementation {
 
 	public static void main(String[] args) {

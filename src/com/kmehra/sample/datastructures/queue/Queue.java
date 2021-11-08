@@ -1,6 +1,5 @@
 package com.kmehra.sample.datastructures.queue;
 
-
 public class Queue {
 
 	private Node first, last;
