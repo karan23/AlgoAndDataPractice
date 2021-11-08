@@ -61,7 +61,7 @@ public class BinarySearchTree {
 			
 			while(current != null) {
 				
-				System.out.println("value found ::" + current.val);
+				//System.out.println("value found ::" + current.val);
 				if(value == current.val) {
 				
 					find = true;
@@ -69,6 +69,7 @@ public class BinarySearchTree {
 				} else if(value < current.val) {
 					
 					current = current.left;
+					break;
 					
 				} else if(value > current.val) {
 					
