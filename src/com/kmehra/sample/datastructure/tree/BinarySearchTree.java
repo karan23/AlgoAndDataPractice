@@ -1,5 +1,9 @@
 package com.kmehra.sample.datastructure.tree;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree {
 
 	private Node root;
@@ -81,4 +85,42 @@ public class BinarySearchTree {
 		return find;
 		
 	}
+
+	/**
+	 * 
+	 * @author Karan
+	 *
+	 *	Logic : make a queue to remember which next node is to be processed
+	 *	and other list would be used for traversed list.
+	 *
+	 *							10
+	 *						6		15
+	 *					3		8		20
+	 *			
+	 */	
+	
+public ArrayList<Node> BSTtraverse() {
+		
+		ArrayList<Node> traversalList = new ArrayList<>();
+		
+		Queue<Node> queue = new LinkedList<>();
+		
+		
+		queue.add(this.root);
+		
+		while(queue.size() > 0) {
+			
+			Node processNode = queue.poll();
+			
+			if(processNode.left != null) queue.add(processNode.left);
+			
+			if(processNode.right != null) queue.add(processNode.right);
+			
+			traversalList.add(processNode);
+		}
+		
+		return traversalList;
+				
+	}
+	
 }
