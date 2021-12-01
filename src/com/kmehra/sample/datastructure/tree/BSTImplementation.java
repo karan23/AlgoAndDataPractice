@@ -29,7 +29,7 @@ public class BSTImplementation {
 		
 		
 		
-		ArrayList<Node> traversedNodes = bst.BSTtraverse();
+		ArrayList<Node> traversedNodes = bst.DFSInOrdertraverse();//bst.DFSPostOrdertraverse();//bst.DFSPreOrdertraverse();//bst.BSTtraverse();
 		
 		traversedNodes.stream().forEach(node -> System.out.println("Node Value :: " + node.val));
 	}
