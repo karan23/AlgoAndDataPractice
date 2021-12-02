@@ -18,6 +18,13 @@ public class HeapMain {
 		ArrayList<Integer> values = heap.values;
 		
 		values.stream().forEach(value -> System.out.println("Value is : " + value));
+		
+		heap.extractMax();
+		heap.extractMax();
+	
+		System.out.println();
+		values.stream().forEach(value -> System.out.println("Value is : " + value));
 	}
+	
 
 }
